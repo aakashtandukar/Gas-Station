@@ -28,7 +28,7 @@ jobs:
       - name: Build
         run: |
           xcodebuild build \
-          -project YourProject.xcodeproj \
+          -project GasStation.xcodeproj \
           -scheme YourSchemeName \
           -destination 'platform=iOS Simulator,name=iPhone 15' \
           CODE_SIGNING_ALLOWED=NO
