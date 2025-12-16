@@ -1,0 +1,24 @@
+{
+  "originHash" : "0e72f3935067f4b344f0c0470d7d33e2632e2b139d597e26f7292798f0e841f3",
+  "pins" : [
+    {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/Alamofire",
+      "state" : {
+        "revision" : "513364f870f6bfc468f9d2ff0a95caccc10044c5",
+        "version" : "5.10.2"
+      }
+    },
+    {
+      "identity" : "wormholy",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pmusolino/Wormholy.git",
+      "state" : {
+        "revision" : "a24e55226db7c347b6f18f38ba155dc04994d09b",
+        "version" : "2.2.0"
+      }
+    }
+  ],
+  "version" : 3
+}
