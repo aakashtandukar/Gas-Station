@@ -23,7 +23,7 @@ jobs:
       - name: Resolve Swift Package Dependencies
         run: |
           xcodebuild -resolvePackageDependencies \
-          -project YourProject.xcodeproj
+          -project GasStation.xcodeproj
 
       - name: Build
         run: |
