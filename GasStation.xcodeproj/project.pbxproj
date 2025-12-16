@@ -42,6 +42,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D95FDA2C2EF1C61700BEDC36 /* GasStation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = GasStation.xcodeproj; sourceTree = "<group>"; };
 		D97CA9972DD6733800A4D1E7 /* GasStation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GasStation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D97CA9A92DD6733900A4D1E7 /* GasStationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GasStationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D97CA9B32DD6733900A4D1E7 /* GasStationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GasStationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +98,13 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D95FDA302EF1C61700BEDC36 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		D97CA98E2DD6733800A4D1E7 = {
@@ -233,6 +241,12 @@
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D97CA9982DD6733800A4D1E7 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D95FDA302EF1C61700BEDC36 /* Products */;
+					ProjectRef = D95FDA2C2EF1C61700BEDC36 /* GasStation.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D97CA9962DD6733800A4D1E7 /* GasStation */,
@@ -428,10 +442,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GasStation/Preview Content\"";
-				DEVELOPMENT_TEAM = ND3V75K4L9;
+				DEVELOPMENT_TEAM = 5MPFVZ8MMU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -446,6 +461,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.digi.gasstation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -457,10 +473,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GasStation/Preview Content\"";
-				DEVELOPMENT_TEAM = ND3V75K4L9;
+				DEVELOPMENT_TEAM = 5MPFVZ8MMU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -475,6 +492,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.digi.gasstation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
