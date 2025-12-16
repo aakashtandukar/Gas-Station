@@ -43,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		D95FDA2C2EF1C61700BEDC36 /* GasStation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = GasStation.xcodeproj; sourceTree = "<group>"; };
+		D95FDA6B2EF1D30400BEDC36 /* GasStation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = GasStation.xcodeproj; sourceTree = "<group>"; };
 		D97CA9972DD6733800A4D1E7 /* GasStation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GasStation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D97CA9A92DD6733900A4D1E7 /* GasStationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GasStationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D97CA9B32DD6733900A4D1E7 /* GasStationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GasStationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +102,13 @@
 			sourceTree = "<group>";
 		};
 		D95FDA302EF1C61700BEDC36 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D95FDA6F2EF1D30400BEDC36 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -245,6 +253,10 @@
 				{
 					ProductGroup = D95FDA302EF1C61700BEDC36 /* Products */;
 					ProjectRef = D95FDA2C2EF1C61700BEDC36 /* GasStation.xcodeproj */;
+				},
+				{
+					ProductGroup = D95FDA6F2EF1D30400BEDC36 /* Products */;
+					ProjectRef = D95FDA6B2EF1D30400BEDC36 /* GasStation.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -444,7 +456,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"GasStation/Preview Content\"";
 				DEVELOPMENT_TEAM = 5MPFVZ8MMU;
 				ENABLE_PREVIEWS = YES;
@@ -475,7 +487,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"GasStation/Preview Content\"";
 				DEVELOPMENT_TEAM = 5MPFVZ8MMU;
 				ENABLE_PREVIEWS = YES;
