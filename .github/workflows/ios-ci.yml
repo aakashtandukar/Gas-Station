@@ -30,7 +30,7 @@ jobs:
           xcodebuild build \
           -project GasStation.xcodeproj \
           -scheme GasStation \
-          -destination 'platform=iOS Simulator' \
+          -destination 'platform=iOS Simulator,OS=18.4,name=iPhone 16'
           CODE_SIGNING_ALLOWED=NO
 
           
