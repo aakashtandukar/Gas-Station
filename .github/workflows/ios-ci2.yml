@@ -41,12 +41,17 @@ jobs:
 
       - name: Archive
         run: |
-          xcodebuild archive \
-          -project GasStation.xcodeproj \
-          -scheme GasStation \
-          -configuration Release \
-          -archivePath $PWD/build/GasStation.xcarchive
-          CODE_SIGNING_ALLOWED=NO
+            xcodebuild archive \
+            -project GasStation.xcodeproj \
+            -scheme GasStation \
+            -configuration Release \
+            -archivePath $PWD/build/GasStation.xcarchive \
+            CODE_SIGN_STYLE=Automatic \
+            PROVISIONING_PROFILE_SPECIFIER="" \
+            DEVELOPMENT_TEAM=5MPFVZ8MMU \
+            -allowProvisioningUpdates \
+            -allowProvisioningDeviceRegistration
+
 
       - name: Export IPA
         run: |
