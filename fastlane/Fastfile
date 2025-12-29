@@ -1,0 +1,78 @@
+
+require 'dotenv'
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Submit a new beta build to TestFlight"
+  lane :beta do
+    Dotenv.load
+    
+    # Read the key file content directly
+    key_filepath = File.expand_path(ENV['APPSTORE_KEY_FILEPATH'], __dir__)
+    key_content = File.read(key_filepath)
+    
+    build_app(
+      project: "GasStation.xcodeproj",
+      scheme: "GasStation",
+      export_method: "app-store"
+    )
+    
+    upload_to_testflight(
+      api_key: {
+        key_id: ENV["APPSTORE_KEY_ID"],
+        issuer_id: ENV["APPSTORE_ISSUER_ID"],
+        key: key_content  # Use key instead of key_filepath
+      },
+      skip_waiting_for_build_processing: true
+    )
+
+  end
+
+
+  desc "Submit a new beta build to TestFlight"
+  lane :beta_clean do
+    Dotenv.load
+    
+    # Read the key file content directly
+    key_filepath = File.expand_path(ENV['APPSTORE_KEY_FILEPATH'], __dir__)
+    key_content = File.read(key_filepath)
+    
+    build_app(
+      project: "GasStation.xcodeproj",
+      scheme: "GasStation",
+      export_method: "app-store"
+    )
+    
+    upload_to_testflight(
+      api_key: {
+        key_id: ENV["APPSTORE_KEY_ID"],
+        issuer_id: ENV["APPSTORE_ISSUER_ID"],
+        key: key_content  # Use key instead of key_filepath
+      },
+      skip_waiting_for_build_processing: true
+    )
+
+    output_dir = File.expand_path("../build_artifacts", __dir__)  # ios/fastlane/ → project_root/build_artifacts
+    FileUtils.mkdir_p(output_dir)
+
+    # Files created by Fastlane (from lane context)
+    files_to_move = [
+      lane_context[SharedValues::IPA_OUTPUT_PATH],      # .ipa
+      lane_context[SharedValues::DSYM_OUTPUT_PATH],     # .dSYM.zip
+      lane_context[SharedValues::XCODEBUILD_ARCHIVE],   # .xcarchive (optional)
+      "fastlane/report.xml",                            # HTML report (if generated)
+      "fastlane/logs/fastlane.log"                      # latest log (optional)
+    ].compact.uniq
+
+    files_to_move.each do |file|
+      if file && File.exist?(file)
+        basename = File.basename(file)
+        dest = File.join(output_dir, basename)
+        UI.message "📦 Moving #{file} → #{dest}"
+        FileUtils.mv(file, dest, force: true)
+      end
+    end
+
+  end
+end

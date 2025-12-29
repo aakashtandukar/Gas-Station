@@ -1,0 +1,3 @@
+app_identifier "com.digi.gasstation"  # ← Replace with your actual bundle ID
+apple_id "me.aakash.tandukar@gmail.com"         # ← Your Apple ID (for reference)
+team_id "5MPFVZ8MMU"                    # ← From Apple Developer account
